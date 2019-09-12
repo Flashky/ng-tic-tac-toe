@@ -16,6 +16,11 @@ export class CellComponent implements OnInit, GameOverListener, GameStartListene
   @Input()
   private column: number;
 
+  private readonly PLAYER_ICON = {
+    1: "X",
+    2: "O"
+  }
+
   /**
    * The value contained of the cell. 
    * Can be either X, O or empty.
@@ -36,12 +41,12 @@ export class CellComponent implements OnInit, GameOverListener, GameStartListene
     this.initialize();
   }
 
-  getCellClass() {
-    return 'player-'+this.value;
-  }
-
   onSelectCell() {
-    this.value = this.gameService.play(this.row, this.column);
+    // Play turn
+    let currentPlayer = this.gameService.play(this.row, this.column);
+
+    // Update cell value and disable the button
+    this.value = this.PLAYER_ICON[currentPlayer];
     this.disabled = true;
   }
 

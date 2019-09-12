@@ -1,9 +1,35 @@
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
+  .grid-item {
+    background-color: #afe5ff;
+    border: 5px solid #20006b;
+    /*padding: 50px;*/
+    font-size: 65px;
+    font-weight: bolder;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    
     text-align: center;
+    outline: none;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  .left-item {
+    border-left: 0;
+  }
+
+  .right-item {
+    border-right: 0;
+  }
+
+  .top-item {
+    border-top: 0;
+  }
+
+  .bottom-item {
+    border-bottom: 0;
   }
 
   .player-1 {

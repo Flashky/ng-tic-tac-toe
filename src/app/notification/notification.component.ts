@@ -12,6 +12,7 @@ export class NotificationComponent implements OnInit, GameOverListener, GameStar
 
 
   private message: string;
+  private messageClass: string;
 
   constructor(private gameService: GameService) { 
     this.gameService.addGameOverListener(this);
@@ -23,7 +24,14 @@ export class NotificationComponent implements OnInit, GameOverListener, GameStar
   }
 
   onGameOver(winner: string) {
-    this.message = "Winner: " + winner;
+    if(winner == 'tie') {
+      this.message = 'Draw game... :-( Want to play again?';
+      this.messageClass = 'span-6 alert alert-warning';
+    } else {
+      this.message = 'Player '+ winner + ' has won the match!';
+      this.messageClass = 'span-6 alert alert-success';
+    }
+    
   }
 
   onGameStart() {
@@ -32,6 +40,10 @@ export class NotificationComponent implements OnInit, GameOverListener, GameStar
 
   getMessage() {
     return this.message;
+  }
+
+  getClass() {
+    return this.messageClass;
   }
 
   private initialize() {

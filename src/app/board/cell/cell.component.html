@@ -1,4 +1,11 @@
 <button class="grid-item" 
             (click)="onSelectCell()"  
-            [ngClass]="getCellClass()"
-            [disabled]="isDisabled()"></button>
+            [ngClass]="{
+                'left-item':    this.column == 0 ,
+                'right-item':   this.column == 2,
+                'top-item':     this.row == 0,
+                'bottom-item':  this.row == 2,
+                'cursor':       !this.disabled  
+            }"
+            [disabled]="isDisabled()"
+            [innerHTML]="value"></button>
