@@ -1,7 +1,7 @@
   .grid-item {
-    background-color: #afe5ff;
-    border: 5px solid #20006b;
-    /*padding: 50px;*/
+    background-color: #652EC7;
+    border: 5px solid #FE38C8;
+    color: #FFD300;
     font-size: 65px;
     font-weight: bolder;
     width: 100px;
@@ -30,12 +30,4 @@
 
   .bottom-item {
     border-bottom: 0;
-  }
-
-  .player-1 {
-    background-color: red;
-  }
-
-  .player-2 {
-    background-color: blue;
   }
