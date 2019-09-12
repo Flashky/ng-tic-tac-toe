@@ -1,0 +1,5 @@
+export interface GameStartListener {
+
+    onGameStart();
+    
+}
