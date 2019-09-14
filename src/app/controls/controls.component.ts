@@ -17,4 +17,7 @@ export class ControlsComponent implements OnInit {
     this.gameService.startGame();
   }
 
+  modalTest() {
+    
+  }
 }
